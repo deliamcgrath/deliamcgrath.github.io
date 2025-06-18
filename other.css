@@ -1,0 +1,498 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/Open_Sans/static/OpenSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Varela Round';
+  src: url('/fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DaysOne';
+  src: url('/fonts/Days_One/DaysOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff9f4;
+  color: #111;
+  max-width: 900px;
+  
+  position: relative;
+}
+
+.intro.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.strike {
+  position: relative;
+  display: inline-block;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.strike::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #b93011;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.strike.animate::after {
+  transform: scaleX(1);
+}
+
+header h1 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 7rem;
+  color: #b93011;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+section {
+  background-color: #a13c3c;
+  color: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+section:hover {
+  transform: translateY(-4px);
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto 40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(185, 48, 17, 0.5);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: #c8c8c8;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  z-index: 9999;
+}
+
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: 'Varela Round', sans-serif;
+  font-size: clamp(40px, 8vw, 100px);
+  letter-spacing: 0.15em;
+  text-align: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* full screen height */
+
+  background: #fff9f4;
+  z-index: 10;
+
+  margin: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+}
+
+#static, #typewriter {
+  display: inline;
+  white-space: normal;
+  position: relative;
+  text-align: left;
+}
+
+
+.intro.expanded {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700; /* bold weight */
+  font-size: clamp(46px, 6vw, 96px);
+  background-color: #fff;
+  color: #000000;
+  padding: 0px 8px;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: auto;
+  z-index: 20;
+  transition: all 1s ease;
+}
+
+
+
+.intro.slide-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.site-content {
+  width: 100vw;       /* full viewport width */
+  max-width: 100vw;   /* no max-width */
+  margin: 0;          /* no centering */
+  padding: 0 px;    /* optional horizontal padding */
+}
+.site-content #name {
+  position: relative;    /* pinned relative to viewport */
+  top: 0px;
+  left: 0;           /* always at viewport’s left edge */
+  padding-left: 0px; /* give some space from edge */
+  font-family: 'Varela Round', sans-serif;
+  font-size: 5rem;
+  color: #ff4d00;
+  letter-spacing: 0.07em;
+  z-index: 9999;
+  margin: 0;
+  text-align: left;
+  white-space: normal;    /* allow wrapping */
+  max-width: calc(100vw - 40px);  /* prevent overflow */
+  pointer-events: none;
+}
+.site-content p{
+    color: rgb(246, 48, 27);
+    text-align: left;
+}
+
+
+/* When screen is smaller than 600px, allow wrapping */
+@media (max-width: 600px) {
+  .site-content #name {
+    white-space: normal; /* Allow wrapping */
+    padding: 0 10px; /* Add some padding so text doesn't hit edges */
+  }
+}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 800px;
+  overflow: hidden;
+  
+  * {
+    transform-style: preserve-3d;
+  }
+  
+  --duration: 2s;
+  --delay: -3s;
+}
+
+.scene {
+  position: relative;
+  animation: scene 48s -28s infinite linear;
+
+  * {
+    position: absolute;
+  }
+}
+
+@keyframes scene {
+  to { rotate: y 1turn; }  
+}
+
+.floor {
+  inset: -100em;
+  background-color: #333;
+  background-image:
+    radial-gradient(closest-side, transparent, #000),
+    radial-gradient(circle at 46.3% 44.6%, #0006, transparent 2em),
+    radial-gradient(circle at 53.7% 44.6%, #0006, transparent 2em),
+    radial-gradient(circle at 53.7% 55.4%, #0006, transparent 2em),
+    radial-gradient(circle at 46.3% 55.4%, #0006, transparent 2em),
+    repeating-linear-gradient(#0003 0, #0000, #0003 1em),
+    repeating-linear-gradient(90deg, #0003 0, #0000, #0003 1em);
+  transform: translateY(16em) rotateX(90deg);
+  
+  .shadow {
+    inset: 90em;
+    background-image: radial-gradient(closest-side, #0003, 75%, transparent);
+    animation:
+      shadowMove var(--duration) infinite ease-in-out alternate,
+      shadowOpacity calc(var(--duration) * 0.5) infinite ease-in-out alternate;
+  }
+}
+
+@keyframes shadowMove {
+  from { translate: -15em; }
+  to { translate: 15em; }
+}
+
+@keyframes shadowOpacity {
+  from { opacity: 0.5; scale: 2; }
+  to { opacity: 1; scale: 1; }
+}
+
+.swing {
+  position: absolute;
+  translate: 0 -12em;
+}
+
+.structure {
+    left: -0.5em; top: -1.2em;
+    --color: rgb(255, 3, 3);;
+  
+  .top {
+    rotate: 45deg;
+
+    --width: 1em;
+    --height: 1em;
+    --depth: 24em;    
+  }
+  
+  .legs {
+    translate: 0 1em var(--tz, 11em);
+    
+    div {
+      transform-origin: top;
+      rotate: var(--rz, 15deg);
+      
+      --width: 1em;
+      --height: 30em;
+      --depth: 1em;
+      
+      &:nth-child(2) { --rz: -15deg; }
+    }
+    &:nth-child(2) { --tz: -11em; }
+  }
+
+}
+
+.moving {
+  animation: swing var(--duration) infinite ease-in-out alternate;
+  
+  .line {
+    left: -0.1em; top: 0;
+    width: 0.2em; height: 20em;
+    background-image: linear-gradient(90deg, #fff, #777, #fff);
+    transform: translateZ(var(--tz, 4em));
+    
+    &:nth-child(2) {
+      --tz: -4em;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      rotate: y 90deg;
+      background: inherit;
+    }
+  }
+  
+  .seat {
+    left: -2em; top: 20em;
+    
+    --width: 4em;
+    --height: 1em;
+    --depth: 10em;
+    --color: rgb(255, 3, 3);
+  }
+}
+
+@keyframes swing {
+  from { rotate: 45deg; }
+  to { rotate: -45deg; }
+}
+
+.robot {
+  translate: -1.5em 19.5em;
+  
+  .thigh {
+    left: 0.5em; top: -0.5em;
+    transform: translateZ(var(--tz, 1em)) rotateY(var(--ry, -10deg));
+
+    --width: 5em;
+    --height: 1em;
+    --depth: 1em;
+    
+    &:nth-child(2) { --tz: -1em; --ry: 10deg; }
+  }
+  
+  .calf {
+    left: 100%; top: 0;
+    width: 4em; height: 1em;
+    transform-origin: top left;
+    animation: calf var(--duration) var(--delay) infinite ease-in-out alternate;
+    
+    --width: 4em;
+    --height: 1em;
+    --depth: 1em;
+  }
+
+  .foot {
+    left: 100%; top: 0;
+    transform-origin: bottom left;
+    animation: foot var(--duration) var(--delay) infinite ease-in-out alternate;
+
+    --width: 2em;
+    --height: 1em;
+    --depth: 1em;
+  }
+  
+  .thorax {
+    left: -0em; bottom: -0.5em;
+    transform-origin: bottom left;
+    animation: thorax var(--duration) var(--delay) infinite ease-in-out alternate;
+    
+    --width: 2em;
+    --height: 6em;
+    --depth: 4em;
+  }
+  
+  .neck {
+    left: 0.5em; top: -1.5em;
+    transform-origin: bottom;
+    animation: head var(--duration) var(--delay) infinite ease-in-out alternate;
+      
+    --width: 1em;
+    --height: 2em;
+    --depth: 1em;
+  }
+  
+  .head {
+    left: -0.5em; top: -2.5em;
+    transform-origin: bottom;
+    animation: head var(--duration) var(--delay) infinite ease-in-out alternate;
+      
+    --width: 2em;
+    --height: 3em;
+    --depth: 2em;
+  }
+  
+  .arm {
+    left: 0.5em; top: 1em;
+    transform-origin: 50% 50% calc(var(--lr, 1) * -1.5em);
+    animation: arm var(--duration) var(--delay) infinite ease-in-out alternate;
+
+    --width: 1em;
+    --height: 1em;
+    --depth: 4em;
+    
+    &:nth-child(9) { --lr: -1; }
+  }
+  .hand {
+    left: 0; top: 0;
+    transform-origin: 0% 50% calc(var(--lr, 1) * -1.5em);
+    animation: hand var(--duration) var(--delay) infinite ease-in-out alternate;
+   
+    --width: 1em;
+    --height: 1em;
+    --depth: 3em;
+  }
+}
+
+@keyframes calf {
+  0% { rotate: 5deg; }
+  100% { rotate: 85deg; }
+}
+@keyframes foot {
+  0%, 30% { rotate: -45deg; }
+  70%, 100% { rotate: -25deg; }
+}
+@keyframes thorax {
+  0%, 20% { translate: 0.5em -0em; rotate: -60deg; }
+  80%, 100% { translate: -0em 0em; rotate: 15deg; }
+}
+@keyframes head {
+  0% { rotate: -5deg; }
+  100% { rotate: 10deg; }
+}
+@keyframes arm {
+  0%, 20% { transform: translateZ(calc(var(--lr, 1) * 3em)) rotateX(calc(var(--lr, 1) * -40deg)) rotateY(calc(var(--lr, 1) * 20deg)); }
+  80%, 100% { transform: translateZ(calc(var(--lr, 1) * 3em)) rotateX(0deg) rotateY(calc(var(--lr, 1) * -60deg)); }
+}
+@keyframes hand {
+  0%, 20% { transform: translateZ(calc(var(--lr, 1) * 3.5em)) rotateY(calc(var(--lr, 1) * 60deg)) rotateZ(40deg); }
+  80%, 100% { transform: translateZ(calc(var(--lr, 1) * 3.5em)) rotateY(calc(var(--lr, 1) * 120deg)) rotateX(0deg); }
+}
+
+/* boxes */
+*:has(> i) {
+  width: var(--width);
+  height: var(--height);
+  
+  i {
+    left: 50%; top: 50%;
+    background-color: var(--color, #fffdfd);
+    box-shadow: 0 0 1em #000000 inset;
+
+    &:nth-child(1) {
+      inset: 0;
+      transform: translateZ(calc(var(--depth) * 0.5));
+    }
+    &:nth-child(2) {
+      width: var(--depth); height: 100%;
+      transform: translate(-50%, -50%) rotateY(90deg) translateZ(calc(var(--width) * 0.5));
+    }
+    &:nth-child(3) {
+      inset: 0;
+      transform: rotateY(180deg) translateZ(calc(var(--depth) * 0.5));
+    }
+    &:nth-child(4) {
+      width: var(--depth); height: 100%;
+      transform: translate(-50%, -50%) rotateY(270deg) translateZ(calc(var(--width) * 0.5));
+    }
+    &:nth-child(5) {
+      width: var(--width); height: var(--depth);
+      transform: translate(-50%, -50%) rotateX(90deg) translateZ(calc(var(--height) * 0.5));
+    }
+    &:nth-child(6) {
+      width: var(--width); height: var(--depth);
+      transform: translate(-50%, -50%) rotateX(270deg) translateZ(calc(var(--height) * 0.5));
+    }
+  }
+}
