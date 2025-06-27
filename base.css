@@ -175,9 +175,7 @@ footer {
 .site-content a, #descriptor {
   color: rgb(246, 48, 27);
   transition: color 0.3s ease;
-  padding-left: 2%;
   font-size: 28px;
-  margin-right: 10px;
   white-space: nowrap;   /* prevent wrapping */
   display: inline-block; /* keep inline but respect padding/margin */
 }
