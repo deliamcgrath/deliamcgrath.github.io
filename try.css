@@ -1,0 +1,160 @@
+
+/* Reset common issues */
+html, body {
+  height: 100%;
+}
+/* === Layout === */
+.content-grid {
+  display: grid;
+  grid-template-columns: 6fr 1fr; /* Left: content, Right: tabs */
+  gap: 2rem;
+  padding: 2rem;
+  
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+
+.content-left {
+  background-color: #222;
+  color: white !important;
+  padding: 2rem;
+  border-radius: 5px;
+  max-height: 90vh; /* or any height you want */
+  overflow-y: auto; /* enables vertical scrolling */
+  max-width: 60vw;
+  font: 'Valera Round', sans-serif;
+}
+
+
+/* Right Column */
+.content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* === Content Title === */
+#name p{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 1em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#name h1{
+  width: 100%;
+  font-size: 4em;
+  color: #f74600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* === Project Content Blocks === */
+.project-content {
+  display: none;
+}
+
+/* Show content1 if p1 is checked */
+#p1:checked ~ .content-grid .content-left .content1 {
+  display: block;
+}
+
+/* Show content2 if p2 is checked */
+#p2:checked ~ .content-grid .content-left .content2 {
+  display: block;
+}
+
+/* === Tab Styling === */
+.project-tab {
+  display: block;
+  width: 100%;
+  background: #807e7e;
+  border: 1px solid #333;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.project-tab:hover {
+  background-color: #e0e0e0;
+}
+
+/* Show name only by default */
+#name {
+  display: block;
+}
+
+#p3:checked ~ .content-grid .content-left .content3 {
+  display: block;
+}
+
+#p4:checked ~ .content-grid .content-left .content4 {
+  display: block;
+}
+
+#p5:checked ~ .content-grid .content-left .content5 {
+  display: block;
+}
+
+#p6:checked ~ .content-grid .content-left .content6 {
+  display: block;
+}
+
+/* Hide #name when any project is selected */
+#p1:checked ~ .content-grid .content-left #name,
+#p2:checked ~ .content-grid .content-left #name,
+#p3:checked ~ .content-grid .content-left #name,
+#p4:checked ~ .content-grid .content-left #name,
+#p5:checked ~ .content-grid .content-left #name,
+#p6:checked ~ .content-grid .content-left #name {
+  display: none;
+}
+
+/* Highlight the selected tab */
+#p1:checked ~ .content-grid .content-right label[for="p1"],
+#p2:checked ~ .content-grid .content-right label[for="p2"],
+#p3:checked ~ .content-grid .content-right label[for="p3"],
+#p4:checked ~ .content-grid .content-right label[for="p4"],
+#p5:checked ~ .content-grid .content-right label[for="p5"],
+#p6:checked ~ .content-grid .content-right label[for="p6"] {
+  background-color: #333;
+  color: white;
+  border-color: #666;
+}
+
+
+.site-content {
+  flex: 1;
+  padding-bottom: 60px; /* space for the fixed footer */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #c8c8c8;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+img {
+  display: block;
+  max-width: 180px;
+  border-radius: 50%;
+  margin: 20px auto;
+}

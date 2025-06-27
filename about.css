@@ -1,0 +1,61 @@
+
+.h2 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 3rem;
+  color: #fa231b;
+  margin-bottom: 20px;
+  display: top;
+}
+
+p {
+  color: antiquewhite!;
+}
+.daylight p{
+  color: #5f3808;
+}
+
+
+.site-content #name {
+  position: initial;
+  top: 0px;
+  left: 0;
+  padding-left: 0px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 5rem;
+  color: #ff4d00;
+  letter-spacing: 0.07em;
+  z-index: 0;
+  margin: 0;
+  text-align: left;
+  white-space: normal;
+  max-width: calc(100vw - 40px);
+  pointer-events: none;
+  
+}
+
+.about-content p {
+  color: #cdbeb8;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif sans-serif;
+  
+}
+.about-content {
+  position:relative;  /* Not absolute! */
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.5rem;
+  color: #caa99b;
+  text-align: left;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(254, 210, 210, 0.2);
+  box-shadow: #e61f1f 0 0 10px, #fb3333 0 0 20px, #fb5f05 0 0 30px, #ff4848 0 0 40px, #ff6200 0 0 5px, #fff 0 0 6px, #fff 0 0 7px;
+  
+}

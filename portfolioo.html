@@ -1,0 +1,182 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stationary-scene.css">
+    <link rel="stylesheet" href="try.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- <div class="intro">
+        <h1>
+            <div id="static"></div>
+            <div id="typewriter"></div>
+        </h1>
+    </div> -->
+    <div class="topnav">
+        <div class="topnav-links">
+            <a href="index.html">home</a>
+            <a href="aboutt.html">about</a>
+            <a href="portfolio.html" class="active">portfolio</a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="site-content">
+            <div class="project-wrapper">
+                <!-- Hidden Radio Inputs -->
+                <input type="radio" id="p1" name="project" hidden>
+                <input type="radio" id="p2" name="project" hidden>
+                <input type="radio" id="p3" name="project" hidden>
+                <input type="radio" id="p4" name="project" hidden>
+                <input type="radio" id="p5" name="project" hidden>
+                <input type="radio" id="p6" name="project" hidden>
+
+                <div class="content-grid">
+                    <div class="content-left">
+                        <div id="name">
+                            <h1>projects</h1>
+
+                            <p>
+                                This is a selection of my work. I’ll do my best to keep it updated with open-source
+                                projects
+                                and publications (most are currently under review). While I can’t share proprietary work
+                                from companies, when aspects of our work become public or commercial, I’ll aim to
+                                abstract
+                                and highlight general features or concepts that may be of broader interest.
+                            </p>
+                        </div>
+                        <div class="project-content content1">
+                            <h2>Pet Robot</h2>
+                            <p>
+                                While at Konpanion, our pet robot, <strong>Maah</strong>, is designed to address the
+                                challenge of loneliness
+                                among the elderly.
+                                <img src="images/robot/maah.png" alt="Pet Robot Maah" class="project-image">
+                            </p>
+                            <p>
+                                I work on the robot’s autonomous software, focusing on how it adapts over time to
+                                develop a unique personality and emotional responses. We also integrate perception
+                                systems that help communicate the state of patients to caregivers and nurses.
+                            </p>
+                            <p>
+                                If Maah looks a little unusual, that's intentional. Our team deliberately avoided a
+                                typical robotic appearance to ensure he feels non-threatening and comforting to users.
+                            </p>
+                        </div>
+
+                        <div class="project-content content2">
+                            <h2>LLM Extraction Attacks</h2>
+                            <p>
+                                Investigated privacy vulnerabilities in LLM architectures SSMs to transformers through
+                                data extraction attacks and ICL 'attacks' where ICL attacks have private information.
+                            </p>
+                            <p>
+                                Currently under review, more will be added soon.
+                            </p>
+                        </div>
+
+                        <div class="project-content content3">
+                            <h2>Breathing Wearable</h2>
+                            <p>
+                                Developed a real-time monitoring pipeline for a Bluetooth-enabled wearable integrating
+                                multiple biosignals; optimized firmware for responsive edge inference, reducing latency
+                                by
+                                25% and extending battery life by 10%.
+                            </p>
+                        </div>
+
+                        <div class="project-content content4">
+                            <h2>Draughts Vision Tracker</h2>
+                            <p>
+
+                                A computer vision system to analyze draughts (checkers) gameplay from video and
+                                static images. This five-part pipeline includes pixel classification, piece
+                                detection, board transformation, motion analysis, and King piece identification.
+                            </p>
+
+                            <ul>
+                                <li><strong>Pixel Classification:</strong> Converted images to HSV, performed back
+                                    projection with histograms, and applied connected components analysis for
+                                    classifying each pixel as board square or piece.</li>
+                                <li><strong>Piece Detection:</strong> Used perspective transforms and square-center
+                                    validation to classify pieces with 97% accuracy.</li>
+                                <li><strong>Video Tracking:</strong> Applied Gaussian Mixture Models to isolate
+                                    low-motion frames and detect moves frame-by-frame with 84% accuracy.</li>
+                                <li><strong>Corner & Edge Detection:</strong> Compared Hough Lines, contour
+                                    segmentation, and OpenCV's chessboard detection for board registration.</li>
+                                <li><strong>King Detection:</strong> Investigated Hough Circles and shape heuristics
+                                    for detecting Kings via board position and features.</li>
+                            </ul>
+
+                            <p>
+                                Developed in Python using OpenCV, NumPy, and Matplotlib. Used real-game footage and
+                                annotated datasets to evaluate the system's performance.
+                            </p>
+
+                            <div class="project-image-grid">
+                                <img src="images/draughts/LineSegments.png" alt="HSV Pixel Classification">
+                                <img src="images/draughts/detect_1.png" alt="Piece Detection">
+                                <img src="images/draughts/TransformedAndPieces.png" alt="TransformedAndPieces">
+                                <img src="images/draughts/board.png" alt="Board Detection">
+                            </div>
+                        </div>
+
+
+                        <div class="project-content content5">
+                            <h2>Migraine Tracker/Predictor</h2>
+                            <p>
+                                Developed a personalized migraine tracking and prediction system integrating embedded
+                                sensors and voice through adaptive learning.
+                            </p>
+                        </div>
+
+                        <div class="project-content content6">
+                            <h2>3D Winter Wonderland Navigable Scene</h2>
+                            <p>
+                                Created a 3D environment featuring realistic lighting and shaders; optimized performance
+                                with level of detail management and frustum culling to maintain 60 FPS on mid-range
+                                GPUs.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="content-right">
+                        <label for="p1" class="project-tab">Pet Robot</label>
+                        <label for="p2" class="project-tab">LLM Extraction Attacks</label>
+                        <label for="p3" class="project-tab">Breathing Wearable</label>
+                        <label for="p4" class="project-tab">Draughts Vision Tracker</label>
+                        <label for="p5" class="project-tab">Migraine Tracker/Predictor</label>
+                        <label for="p6" class="project-tab">3D Winter Wonderland Navigable Scene</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="scene">
+        <div class="floor">
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>© 2025 Delia McGrath</p>
+    </footer>
+
+</body>
+
+</html>
