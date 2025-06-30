@@ -8,7 +8,7 @@
     <title>DM</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="stationary-scene.css">
-    <link rel="stylesheet" href="try.css">
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="icon" href="icon.ico" type="image/x-icon">
 
 </head>
@@ -20,6 +20,7 @@
             <div id="typewriter"></div>
         </h1>
     </div> -->
+    <div class="site-content"></div>
     <div class="topnav">
         <div class="topnav-links">
             <a href="index.html">home</a>
@@ -28,140 +29,195 @@
         </div>
     </div>
 
-    <div class="main-container">
-        <div class="site-content">
-            <div class="project-wrapper">
-                <!-- Hidden Radio Inputs -->
-                <input type="radio" id="p1" name="project" hidden>
-                <input type="radio" id="p2" name="project" hidden>
-                <input type="radio" id="p3" name="project" hidden>
-                <input type="radio" id="p4" name="project" hidden>
-                <input type="radio" id="p5" name="project" hidden>
-                <input type="radio" id="p6" name="project" hidden>
+    <input type="radio" id="p1" name="project" hidden>
+    <input type="radio" id="p2" name="project" hidden>
+    <input type="radio" id="p3" name="project" hidden>
+    <input type="radio" id="p4" name="project" hidden>
+    <input type="radio" id="p5" name="project" hidden>
+    <input type="radio" id="p6" name="project" hidden>
 
-                <div class="content-grid">
-                    <div class="content-left">
-                        <div id="name">
-                            <h1>projects</h1>
+    <div class="content-grid">
+        <div class="content-left">
+            <div id="name">
+                <h1>projects</h1>
 
-                            <p>
-                                This is a selection of my work. I’ll do my best to keep it updated with open-source
-                                projects
-                                and publications (most are currently under review). While I can’t share proprietary work
-                                from companies, when aspects of our work become public or commercial, I’ll aim to
-                                abstract
-                                and highlight general features or concepts that may be of broader interest.
-                            </p>
-                        </div>
-                        <div class="project-content content1">
-                            <h2>Pet Robot</h2>
-                            <p>
-                                While at Konpanion, our pet robot, <strong>Maah</strong>, is designed to address the
-                                challenge of loneliness
-                                among the elderly.
-                                <img src="images/robot/maah.png" alt="Pet Robot Maah" class="project-image">
-                            </p>
-                            <p>
-                                I work on the robot’s autonomous software, focusing on how it adapts over time to
-                                develop a unique personality and emotional responses. We also integrate perception
-                                systems that help communicate the state of patients to caregivers and nurses.
-                            </p>
-                            <p>
-                                If Maah looks a little unusual, that's intentional. Our team deliberately avoided a
-                                typical robotic appearance to ensure he feels non-threatening and comforting to users.
-                            </p>
-                        </div>
+                <p>
+                    This is a selection of my work. I’ll do my best to keep it updated with open-source
+                    projects
+                    and publications (most are currently under review). While I can’t share proprietary work
+                    from companies, when aspects of our work become public or commercial, I’ll aim to
+                    abstract
+                    and highlight general features or concepts that may be of broader interest.
+                </p>
+            </div>
+            <div class="project-content content1">
+                <h2>Pet Robot</h2>
 
-                        <div class="project-content content2">
-                            <h2>LLM Extraction Attacks</h2>
-                            <p>
-                                Investigated privacy vulnerabilities in LLM architectures SSMs to transformers through
-                                data extraction attacks and ICL 'attacks' where ICL attacks have private information.
-                            </p>
-                            <p>
-                                Currently under review, more will be added soon.
-                            </p>
-                        </div>
+                <p>
+                    At Konpanion, our pet robot <strong>Maah</strong> was created to address the challenge
+                    of loneliness among the elderly.
+                </p>
 
-                        <div class="project-content content3">
-                            <h2>Breathing Wearable</h2>
-                            <p>
-                                Developed a real-time monitoring pipeline for a Bluetooth-enabled wearable integrating
-                                multiple biosignals; optimized firmware for responsive edge inference, reducing latency
-                                by
-                                25% and extending battery life by 10%.
-                            </p>
-                        </div>
+                <p>
+                    <img src="images/robot/maah.png" alt="Pet Robot Maah" class="project-image">
+                </p>
 
-                        <div class="project-content content4">
-                            <h2>Draughts Vision Tracker</h2>
-                            <p>
+                <p>
+                    Our work draws on research in <strong>human-robot interaction</strong>, computational
+                    biology, cognitive AI, perception, and game agent design. Rather than focusing solely on
+                    technical methods, we explore broader questions:
+                    How can our robot behave like real animals—emotionally, cognitively, and socially? How
+                    does it interpret sensory input to understand human states? How can it form memories,
+                    make plans, and develop a personality shaped by experience?
+                </p>
 
-                                A computer vision system to analyze draughts (checkers) gameplay from video and
-                                static images. This five-part pipeline includes pixel classification, piece
-                                detection, board transformation, motion analysis, and King piece identification.
-                            </p>
+                <p>
+                    I work on Maah’s autonomous software, focusing on how it adapts over time to develop a
+                    unique personality and emotional responses. We also integrate perception systems to help
+                    communicate a patient's state to caregivers and nurses.
+                </p>
 
-                            <ul>
-                                <li><strong>Pixel Classification:</strong> Converted images to HSV, performed back
-                                    projection with histograms, and applied connected components analysis for
-                                    classifying each pixel as board square or piece.</li>
-                                <li><strong>Piece Detection:</strong> Used perspective transforms and square-center
-                                    validation to classify pieces with 97% accuracy.</li>
-                                <li><strong>Video Tracking:</strong> Applied Gaussian Mixture Models to isolate
-                                    low-motion frames and detect moves frame-by-frame with 84% accuracy.</li>
-                                <li><strong>Corner & Edge Detection:</strong> Compared Hough Lines, contour
-                                    segmentation, and OpenCV's chessboard detection for board registration.</li>
-                                <li><strong>King Detection:</strong> Investigated Hough Circles and shape heuristics
-                                    for detecting Kings via board position and features.</li>
-                            </ul>
-
-                            <p>
-                                Developed in Python using OpenCV, NumPy, and Matplotlib. Used real-game footage and
-                                annotated datasets to evaluate the system's performance.
-                            </p>
-
-                            <div class="project-image-grid">
-                                <img src="images/draughts/LineSegments.png" alt="HSV Pixel Classification">
-                                <img src="images/draughts/detect_1.png" alt="Piece Detection">
-                                <img src="images/draughts/TransformedAndPieces.png" alt="TransformedAndPieces">
-                                <img src="images/draughts/board.png" alt="Board Detection">
-                            </div>
-                        </div>
+                <p>
+                    Also, Maah looks a unusual, and that was done on purpose to make sure he feels comforting and non-threatening to users.
+                </p>
+            </div>
 
 
-                        <div class="project-content content5">
-                            <h2>Migraine Tracker/Predictor</h2>
-                            <p>
-                                Developed a personalized migraine tracking and prediction system integrating embedded
-                                sensors and voice through adaptive learning.
-                            </p>
-                        </div>
+            <div class="project-content content2">
+                <h2>LLM Extraction Attacks <a href="https://github.com/dmcgrath19/ArchitectureExtraction"   class="github-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <svg height="32" width="32" viewBox="0 0 16 16" version="1.1" aria-hidden="true" fill="currentColor"
+                        style="vertical-align: middle;">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 
+    2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 
+    3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                </a></h2>
+                <p>
+                    Investigated privacy vulnerabilities in LLM architectures SSMs to transformers
+                    through
+                    data extraction attacks and ICL 'attacks' where ICL attacks have private
+                    information.
+                </p>
+                <p>
+                    Trends find that these models scale similarly to transformers with input-size, but retain higher
+                    levels of memorization across general extraction attacks.
+                </p>
+                <img src="images/extraction/Subset-Extraction.png" alt="LLM subset" class="project-image">
+                <img src="images/extraction/general_trends.png" alt="LLM subset 2" class="project-image">
 
-                        <div class="project-content content6">
-                            <h2>3D Winter Wonderland Navigable Scene</h2>
-                            <p>
-                                Created a 3D environment featuring realistic lighting and shaders; optimized performance
-                                with level of detail management and frustum culling to maintain 60 FPS on mid-range
-                                GPUs.
-                            </p>
-                        </div>
+                <p>
+                    Currently under review, more will be added soon.
+                </p>
+            </div>
 
-                    </div>
+            <div class="project-content content3">
+                <h2>Breathing Wearable</h2>
+                <p>
+                    Developed a real-time monitoring pipeline for a Bluetooth-enabled wearable
+                    integrating
+                    multiple biosignals; optimized firmware for responsive edge inference, reducing
+                    latency
+                    by
+                    25% and extending battery life by 10%.
+                </p>
+            </div>
 
-                    <div class="content-right">
-                        <label for="p1" class="project-tab">Pet Robot</label>
-                        <label for="p2" class="project-tab">LLM Extraction Attacks</label>
-                        <label for="p3" class="project-tab">Breathing Wearable</label>
-                        <label for="p4" class="project-tab">Draughts Vision Tracker</label>
-                        <label for="p5" class="project-tab">Migraine Tracker/Predictor</label>
-                        <label for="p6" class="project-tab">3D Winter Wonderland Navigable Scene</label>
-                    </div>
+            <div class="project-content content4">
+                <h2>Draughts Vision Tracker <a href="https://github.com/dmcgrath19/draughts"   class="github-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <svg height="32" width="32" viewBox="0 0 16 16" version="1.1" aria-hidden="true" fill="currentColor"
+                        style="vertical-align: middle;">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 
+    2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 
+    3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                </a></h2>
+                <p>
+
+                    A computer vision system to analyze draughts (checkers) gameplay from video and
+                    static images. This five-part pipeline includes pixel classification, piece
+                    detection, board transformation, motion analysis, and King piece identification.
+                </p>
+
+                <ul>
+                    <li><strong>Pixel Classification:</strong> Converted images to HSV, performed back
+                        projection with histograms, and applied connected components analysis for
+                        classifying each pixel as board square or piece.</li>
+                    <li><strong>Piece Detection:</strong> Used perspective transforms and square-center
+                        validation to classify pieces with 97% accuracy.</li>
+                    <li><strong>Video Tracking:</strong> Applied Gaussian Mixture Models to isolate
+                        low-motion frames and detect moves frame-by-frame with 84% accuracy.</li>
+                    <li><strong>Corner & Edge Detection:</strong> Compared Hough Lines, contour
+                        segmentation, and OpenCV's chessboard detection for board registration.</li>
+                    <li><strong>King Detection:</strong> Investigated Hough Circles and shape heuristics
+                        for detecting Kings via board position and features.</li>
+                </ul>
+
+                <p>
+                    Developed in Python using OpenCV, NumPy, and Matplotlib. Used real-game footage and
+                    annotated datasets to evaluate the system's performance.
+                </p>
+
+                <div class="project-image-grid">
+                    <img src="images/draughts/board_game.png" alt="Board Detection">
+                    <img src="images/draughts/LineSegments.png" alt="HSV Pixel Classification">
+                    <img src="images/draughts/detect_1.png" alt="Piece Detection">
+                    <img src="images/draughts/TransformedAndPieces.png" alt="TransformedAndPieces">
                 </div>
             </div>
 
 
+            <div class="project-content content5">
+                <h2>Migraine Tracker/Predictor</h2>
+                <p>
+                    Developed a personalized migraine tracking and prediction system integrating
+                    embedded
+                    sensors and voice through adaptive learning.
+                </p>
+            </div>
 
+            <div class="project-content content6">
+                <h2>indoSLAM - RGB-D
+                <a href="https://github.com/dmcgrath19/indoSLAM"   class="github-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <svg height="32" width="32" viewBox="0 0 16 16" version="1.1" aria-hidden="true" fill="currentColor"
+                        style="vertical-align: middle;">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+    0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 
+    2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 
+    3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                </a></h2>
+
+                <p>Simple A window will display a 6-panel visualization:</p>
+                <ul>
+                    <li>Original RGB frame</li>
+                    <li>3D K-means cluster segmentation</li>
+                    <li>ORB feature visualization</li>
+                    <li>First-pass inlier/outlier matches</li>
+                    <li>Second-pass refined inliers</li>
+                    <li>Final detected dynamic regions</li>
+                </ul>
+                <img src="images/indoSLAM/res.png" alt="Result" class="project-image" />
+            </div>
+
+        </div>
+        <div class="content-right">
+            <label for="p1" class="project-tab">Pet Robot</label>
+            <label for="p2" class="project-tab">LLM Extraction Attacks</label>
+            <label for="p3" class="project-tab">Breathing Wearable</label>
+            <label for="p4" class="project-tab">Draughts Vision Tracker</label>
+            <label for="p5" class="project-tab">Migraine Tracker/Predictor</label>
+            <label for="p6" class="project-tab">RGB-D IndoSLAM</label>
         </div>
     </div>
 

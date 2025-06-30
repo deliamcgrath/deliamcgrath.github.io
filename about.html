@@ -1,0 +1,90 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="scene2.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <h2>Delia McGrath</h2>
+        <a href="index.html">home</a>
+        <a href="about.html" class="active">about</a>
+        <a href="portfolio.html">portfolio</a>
+        <button id="theme-toggle" aria-label="Toggle theme"></button>
+    </div>
+    
+
+    <div class="site-content">
+        <div id="name"><h2>about</h2></div>
+        
+        
+        <div class="scene">
+            <div class="about-content">
+                        <p>
+                            I’m currently an applied researcher at <strong>Konpanion</strong>, where I develop software
+                            for our
+                            autonomous pet robot.
+                            Our work draws on research in <strong>human-robot interaction</strong>, computational
+                            biology, cognitive
+                            AI, and game
+                            agent design. Rather than focusing solely on methods, we ask broader questions: How can our
+                            robot behave
+                            in ways similar to
+                            real animals — emotionally, cognitively, and socially? How does it interpret sensory input
+                            to infer
+                            human states? How can it
+                            form memories, make plans, and develop a personality shaped by its interactions?
+                        </p>
+
+                        <p>
+                            Generally, my main interests lie within <strong>adaptation</strong>,
+                            <strong>interaction</strong>, and
+                            <strong>architectures</strong>. While you don't have to do what you love to be successful, I
+                            find that
+                            focusing here makes it more fun than it probably should be.
+                        </p>
+                    </div>
+
+            <div class="floor">
+               
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer>
+            <p>© 2025 Delia McGrath</p>
+        </footer>
+
+
+        <script src="script.js"></script>
+        <script>
+            const body = document.body;
+            const toggleBtn = document.getElementById("theme-toggle");
+
+            // Apply saved theme on page load
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "daylight") {
+                body.classList.add("daylight");
+            }
+
+            // Toggle and save theme
+            toggleBtn.addEventListener("click", () => {
+                body.classList.toggle("daylight");
+                const newTheme = body.classList.contains("daylight") ? "daylight" : "night";
+                localStorage.setItem("theme", newTheme);
+            });
+        </script>
+
+</body>
+
+</html>
