@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;   /* ✅ prevents any horizontal scroll */
   background-color: #000;
   color: #fff;
+  overflow-y: hidden;
 }
 
 /* Un-nested this */
@@ -191,7 +192,7 @@ body {
 }
 
 .content-left {
-  max-width: 70ch; /* limits line length for readability */
+  max-width: 90ch; /* limits line length for readability */
   margin: 0 auto;
 }
 
