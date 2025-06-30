@@ -255,3 +255,30 @@ ul {
   object-fit: cover;
   aspect-ratio: 1 /1 ;
 }
+
+.topnav {
+  position: fixed;
+  top: 0;
+  right: 0; /* anchor to right */
+  height: 5em;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* aligns children to the right */
+  padding: 0 1em;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  padding-right: 21.5%;
+}
+
+
+.topnav a {
+  text-decoration: none;
+  margin-right: 1em;
+  color: #ffffff;
+}
+
+.topnav a.active {
+  font-weight: bold;
+}
+
