@@ -26,7 +26,7 @@ body * {
   gap: 2rem;
 
   width: 100vw;
-  height: 75vh;        /* ✅ This makes it full viewport height */
+  height: 80vh;        /* ✅ This makes it full viewport height */
   max-width: none;
   margin: 0 auto;         /* ✅ This centers it horizontally */
   box-sizing: border-box;
